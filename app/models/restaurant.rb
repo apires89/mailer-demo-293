@@ -4,6 +4,6 @@ class Restaurant < ApplicationRecord
   private
 
   def send_welcome_restaurant
-    RestaurantMailer.with(user: self).welcome_restaurant.deliver_now
+    RestaurantMailer.with(restaurant: self).welcome_restaurant.deliver_now
   end
 end
